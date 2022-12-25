@@ -18,11 +18,7 @@ class Azienda {
         this.nomeazienda = nomeazienda;
         this.tuttidipendenti = tuttidipendenti;
     }
-
-   
-
 }
-
 
 
 let dipendente1 = new Dipendente();
@@ -53,7 +49,7 @@ Azienda.tuttidipendenti.forEach((dip)=>{
     const div = document.createElement('div');
     container.appendChild(div);
     
-    div.innerHTML = `${dip.cognome}` + " " +`${dip.citta}`
+    div.innerHTML = `${dip.cognome}` + "   " +`${dip.citta}`
 
     
 })
