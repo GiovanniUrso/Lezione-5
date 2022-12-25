@@ -1,28 +1,29 @@
-// Lavoriamo con oggetti
+// Lavoriamo con oggetti : Metodi Statici, Ereditarietà
 
 // Un'azienda ha dei dipendenti e vuole visualizzare il cognome e la città di residenza di ognuno di essi
 
 
-class Azienda {
-    nomeazienda;
-    constructor(nomeazienda){
-       
-        this.nomeazienda = nomeazienda;
-
-    }
-
-}
-
-
-class Dipendente extends Azienda{
+class Dipendente {
     constructor(nome, cognome, citta,datadinascita){
-        super()
         this.nome = nome;
         this.cognome = cognome;
         this.citta = citta;
         this.datadonascita = datadinascita;
     }
 }
+class Azienda {
+    static tuttidipendenti = [];
+    constructor(nomeazienda, tuttidipendenti){
+       
+        this.nomeazienda = nomeazienda;
+        this.tuttidipendenti = tuttidipendenti;
+    }
+
+   
+
+}
+
+
 
 let dipendente1 = new Dipendente();
 dipendente1.nome = 'Giovanni';
@@ -45,12 +46,9 @@ dipendente3.citta = 'Milano';
 dipendente3.datadonascita = new Date('1993-04-31')
 dipendente3.nomeazienda = 'Maserati';
 
-let dipendentiazienda = [];
-dipendentiazienda.push(dipendente1,dipendente2,dipendente3);
-console.log(dipendentiazienda);
+Azienda.tuttidipendenti.push(dipendente1,dipendente2,dipendente3);
 
-dipendentiazienda.forEach((dip)=>{
-
+Azienda.tuttidipendenti.forEach((dip)=>{
     const container = document.getElementById('container');
     const div = document.createElement('div');
     container.appendChild(div);
@@ -59,6 +57,7 @@ dipendentiazienda.forEach((dip)=>{
 
     
 })
+
 
 
 
