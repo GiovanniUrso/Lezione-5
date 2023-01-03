@@ -3,6 +3,14 @@
 // Un'azienda ha dei dipendenti e vuole visualizzare il cognome e la città di residenza di ognuno di essi
 
 
+class Azienda {
+    static tuttidipendenti = [];
+    constructor(nomeazienda, tuttidipendenti){
+        
+        this.nomeazienda = nomeazienda;
+        this.tuttidipendenti = tuttidipendenti;
+    }
+}
 class Dipendente {
     constructor(nome, cognome, citta,datadinascita){
         this.nome = nome;
@@ -11,15 +19,7 @@ class Dipendente {
         this.datadonascita = datadinascita;
     }
 }
-class Azienda {
-    static tuttidipendenti = [];
-    constructor(nomeazienda, tuttidipendenti){
-       
-        this.nomeazienda = nomeazienda;
-        this.tuttidipendenti = tuttidipendenti;
-    }
-}
-
+                                                        // C'e' un ERRORE!
 
 let dipendente1 = new Dipendente();
 dipendente1.nome = 'Giovanni';
