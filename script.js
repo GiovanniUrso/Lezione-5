@@ -4,6 +4,7 @@
 
 
 class Azienda {
+    nomeazienda;
     static tuttidipendenti = [];
     constructor(nomeazienda, tuttidipendenti){
         
@@ -25,7 +26,7 @@ let dipendente1 = new Dipendente();
 dipendente1.nome = 'Giovanni';
 dipendente1.cognome = 'Urso';
 dipendente1.citta = 'Cosenza';
-dipendente1.datadonascita = new Date('1992-07-20')
+dipendente1.datadinascita = new Date('1992-07-20')
 dipendente1.nomeazienda = 'Pirelli';
 
 let dipendente2 = new Dipendente();
